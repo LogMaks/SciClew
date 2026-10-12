@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="book">
+  <p class="meta">
+    <a href="{{ '/books/' | relative_url }}">← Книги</a>
+  </p>
+  <h1>{{ page.title }}</h1>
+  {% if page.author %}
+  <p class="author">{{ page.author }}</p>
+  {% endif %}
+  {% if page.external_url %}
+  <p class="external"><a href="{{ page.external_url }}" rel="noopener noreferrer">Открыть источник ↗</a></p>
+  {% endif %}
+  {{ content }}
+</article>
