@@ -4,21 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,650;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>
 <body>
+  <div class="atmosphere" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="wrap">
       <a class="site-title" href="{{ '/' | relative_url }}">
-        <span class="clew-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
-            <circle class="clew-orbit" cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.35"/>
-            <path class="clew-thread" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-              d="M7 18 C10 10, 14 8, 18 10 C22 12, 24 16, 22 20 C20 24, 14 25, 11 22 C8 19, 10 14, 15 13 C19 12, 22 15, 21 18"/>
-            <circle class="clew-node" cx="16" cy="16" r="1.8" fill="currentColor"/>
-          </svg>
-        </span>
+        {% include clew-mark.html size="header" %}
         <span class="site-title-text">{{ site.title }}</span>
       </a>
       <nav class="site-nav" aria-label="Основная навигация">
