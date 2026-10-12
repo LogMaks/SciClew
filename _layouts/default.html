@@ -10,7 +10,17 @@
 <body>
   <header class="site-header">
     <div class="wrap">
-      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <a class="site-title" href="{{ '/' | relative_url }}">
+        <span class="clew-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" focusable="false">
+            <circle class="clew-orbit" cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.35"/>
+            <path class="clew-thread" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+              d="M7 18 C10 10, 14 8, 18 10 C22 12, 24 16, 22 20 C20 24, 14 25, 11 22 C8 19, 10 14, 15 13 C19 12, 22 15, 21 18"/>
+            <circle class="clew-node" cx="16" cy="16" r="1.8" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="site-title-text">{{ site.title }}</span>
+      </a>
       <nav class="site-nav" aria-label="Основная навигация">
         <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Главная</a>
         <a href="{{ '/meetings/' | relative_url }}"{% if page.url contains '/meetings' %} aria-current="page"{% endif %}>Встречи</a>
@@ -20,7 +30,7 @@
     </div>
   </header>
 
-  <main class="wrap content">
+  <main class="wrap content reveal">
     {{ content }}
   </main>
 
