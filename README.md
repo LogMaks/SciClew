@@ -38,14 +38,15 @@ bundle exec jekyll serve
 ```
 _config.yml          # настройки Jekyll
 _layouts/            # шаблоны страниц
-_includes/           # clew-mark, hero-threads
+_includes/           # clew-mark (тихий SVG-мотив)
 _meetings/           # коллекция встреч
 _notes/              # коллекция заметок
 _books/              # коллекция книг/источников
 assets/css/          # стили (+ лёгкий CSS-motion)
-assets/brand/        # бренд-арт (в т.ч. анонс для Telegram)
+brand/               # внешний бренд-арт (не на Pages; см. brand/README.md)
 index.md             # главная
 meetings.md          # список встреч
 notes.md             # список заметок
 books.md             # список книг
 ```
+
