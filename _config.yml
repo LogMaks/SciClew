@@ -1,8 +1,8 @@
 title: SciClew
 description: Научный дискуссионный клуб — отобранные темы, а не поток всего подряд
 lang: ru
-baseurl: ""
-url: ""
+baseurl: "/SciClew"
+url: "https://logmaks.github.io"
 
 markdown: kramdown
 highlighter: rouge

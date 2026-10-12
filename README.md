@@ -22,12 +22,10 @@ bundle exec jekyll serve
 
 Откройте [http://127.0.0.1:4000](http://127.0.0.1:4000).
 
-Если сайт публикуется как *project site* (`username.github.io/SciClew`), в `_config.yml` задайте:
+Сайт на GitHub Pages: [https://logmaks.github.io/SciClew/](https://logmaks.github.io/SciClew/)  
+(ветка `Default`, корень; в `_config.yml` — `baseurl: "/SciClew"`).
 
-```yaml
-baseurl: "/SciClew"
-url: "https://username.github.io"
-```
+Локально после `jekyll serve` открывайте http://127.0.0.1:4000/SciClew/
 
 ## GitHub Pages
 
