@@ -1,0 +1,53 @@
+title: SciClew
+description: Научный дискуссионный клуб — отобранные темы, а не поток всего подряд
+lang: ru
+baseurl: ""
+url: ""
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+collections:
+  meetings:
+    output: true
+    permalink: /meetings/:name/
+  notes:
+    output: true
+    permalink: /notes/:name/
+  books:
+    output: true
+    permalink: /books/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: meetings
+    values:
+      layout: meeting
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+  - scope:
+      path: ""
+      type: books
+    values:
+      layout: book
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md

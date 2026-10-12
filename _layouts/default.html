@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ru' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Главная</a>
+        <a href="{{ '/meetings/' | relative_url }}"{% if page.url contains '/meetings' %} aria-current="page"{% endif %}>Встречи</a>
+        <a href="{{ '/notes/' | relative_url }}"{% if page.url contains '/notes' %} aria-current="page"{% endif %}>Заметки</a>
+        <a href="{{ '/books/' | relative_url }}"{% if page.url contains '/books' %} aria-current="page"{% endif %}>Книги</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>{{ site.title }} — научный дискуссионный клуб</p>
+    </div>
+  </footer>
+</body>
+</html>
