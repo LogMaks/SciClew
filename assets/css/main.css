@@ -118,28 +118,14 @@ body {
 }
 
 .clew-thread {
-  stroke-dasharray: 56;
-  stroke-dashoffset: 56;
-  animation: thread-draw 4.2s var(--ease) infinite;
-}
-
-.clew-thread--b {
-  stroke-dasharray: 48;
-  stroke-dashoffset: 48;
-  animation-duration: 5.1s;
-  animation-delay: 0.45s;
-}
-
-.clew-thread--c {
-  stroke-dasharray: 44;
-  stroke-dashoffset: 44;
-  animation-duration: 6s;
-  animation-delay: 0.9s;
+  stroke-dasharray: 54;
+  stroke-dashoffset: 54;
+  animation: thread-draw 3.8s var(--ease) infinite;
 }
 
 .clew-orbit {
   transform-origin: 16px 16px;
-  animation: orbit-spin 22s linear infinite;
+  animation: orbit-spin 18s linear infinite;
 }
 
 .clew-node {
@@ -149,20 +135,20 @@ body {
 
 @keyframes thread-draw {
   0% {
-    stroke-dashoffset: 56;
-    opacity: 0.35;
+    stroke-dashoffset: 54;
+    opacity: 0.55;
   }
-  32% {
+  35% {
     stroke-dashoffset: 0;
     opacity: 1;
   }
-  68% {
+  70% {
     stroke-dashoffset: 0;
     opacity: 1;
   }
   100% {
-    stroke-dashoffset: -56;
-    opacity: 0.35;
+    stroke-dashoffset: -54;
+    opacity: 0.55;
   }
 }
 
@@ -175,12 +161,12 @@ body {
 @keyframes node-pulse {
   0%,
   100% {
-    opacity: 0.65;
+    opacity: 0.7;
     transform: scale(1);
   }
   50% {
     opacity: 1;
-    transform: scale(1.28);
+    transform: scale(1.25);
   }
 }
 
@@ -246,7 +232,6 @@ body {
 /* —— Hero (Главная) —— */
 
 .hero {
-  position: relative;
   min-height: min(72vh, 28rem);
   display: flex;
   flex-direction: column;
@@ -254,88 +239,6 @@ body {
   padding: 1.5rem 0 2.75rem;
   margin-bottom: 0.5rem;
   border-bottom: 1px solid var(--rule);
-  overflow: hidden;
-}
-
-.hero-copy {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-threads {
-  pointer-events: none;
-  position: absolute;
-  inset: -8% -4% -12% 18%;
-  z-index: 0;
-  color: var(--link);
-  opacity: 0.22;
-}
-
-.hero-threads-svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.hero-thread {
-  stroke-dasharray: 280;
-  stroke-dashoffset: 280;
-  animation: hero-thread-draw 9s var(--ease) infinite;
-}
-
-.hero-thread--2 {
-  animation-duration: 11s;
-  animation-delay: 1.2s;
-  opacity: 0.75;
-}
-
-.hero-thread--3 {
-  animation-duration: 13s;
-  animation-delay: 2.4s;
-  opacity: 0.55;
-}
-
-.hero-spark {
-  animation: hero-spark 3.6s ease-in-out infinite;
-}
-
-.hero-spark--2 {
-  animation-delay: 0.8s;
-}
-
-.hero-spark--3 {
-  animation-delay: 1.6s;
-}
-
-@keyframes hero-thread-draw {
-  0% {
-    stroke-dashoffset: 280;
-    opacity: 0.15;
-  }
-  28% {
-    stroke-dashoffset: 0;
-    opacity: 0.85;
-  }
-  72% {
-    stroke-dashoffset: 0;
-    opacity: 0.7;
-  }
-  100% {
-    stroke-dashoffset: -120;
-    opacity: 0.1;
-  }
-}
-
-@keyframes hero-spark {
-  0%,
-  100% {
-    opacity: 0.25;
-    transform: scale(0.85);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.35);
-  }
 }
 
 .hero-brand {
@@ -564,30 +467,18 @@ body {
     width: 2.15rem;
     height: 2.15rem;
   }
-
-  .hero-threads {
-    inset: -6% -18% -8% 8%;
-    opacity: 0.16;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .clew-thread,
   .clew-orbit,
   .clew-node,
-  .hero-thread,
-  .hero-spark,
   .reveal {
     animation: none;
   }
 
-  .clew-thread,
-  .hero-thread {
+  .clew-thread {
     stroke-dashoffset: 0;
-  }
-
-  .hero-thread {
-    opacity: 0.45;
   }
 
   .site-title:hover .clew-mark,

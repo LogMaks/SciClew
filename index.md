@@ -5,21 +5,18 @@ permalink: /
 ---
 
 <section class="hero">
-  {% include hero-threads.html %}
-  <div class="hero-copy">
-    <h1 class="hero-brand">
-      {% include clew-mark.html size="hero" %}
-      <span class="hero-brand-text">SciClew</span>
-    </h1>
-    <p class="lede">Отбираем значимые темы и обсуждаем их вместе — без потока всего подряд.</p>
-    <p class="hero-cta">
-      <a href="{{ '/meetings/' | relative_url }}">Встречи</a>
-      <span class="hero-cta-sep" aria-hidden="true">·</span>
-      <a href="{{ '/notes/' | relative_url }}">Заметки</a>
-      <span class="hero-cta-sep" aria-hidden="true">·</span>
-      <a href="{{ '/books/' | relative_url }}">Книги</a>
-    </p>
-  </div>
+  <h1 class="hero-brand">
+    {% include clew-mark.html size="hero" %}
+    <span class="hero-brand-text">SciClew</span>
+  </h1>
+  <p class="lede">Отбираем значимые темы и обсуждаем их вместе — без потока всего подряд.</p>
+  <p class="hero-cta">
+    <a href="{{ '/meetings/' | relative_url }}">Встречи</a>
+    <span class="hero-cta-sep" aria-hidden="true">·</span>
+    <a href="{{ '/notes/' | relative_url }}">Заметки</a>
+    <span class="hero-cta-sep" aria-hidden="true">·</span>
+    <a href="{{ '/books/' | relative_url }}">Книги</a>
+  </p>
 </section>
 
 <section class="section">
