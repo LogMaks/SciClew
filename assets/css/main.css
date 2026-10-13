@@ -375,6 +375,12 @@ body {
   margin-top: -0.25rem;
 }
 
+.meeting mjx-container {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 /* —— Quiet list rows —— */
 
 .item-list {
