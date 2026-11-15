@@ -9,7 +9,7 @@ permalink: /notes/
 <p class="page-lede">Материалы и конспекты обсуждений клуба.</p>
 
 <ul class="item-list">
-{% assign notes = site.notes | sort: 'date' | reverse %}
+{% assign notes = site.notes | where_exp: 'note', 'note.placeholder != true' | sort: 'date' | reverse %}
 {% for note in notes %}
   <li>
     <span class="item-meta">
