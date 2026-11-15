@@ -9,7 +9,7 @@ permalink: /books/
 <p class="page-lede">Интересные источники: внешние ссылки и материалы, сохранённые на сайте.</p>
 
 <ul class="item-list">
-{% assign books = site.books | sort: 'title' %}
+{% assign books = site.books | where_exp: 'book', 'book.placeholder != true' | sort: 'title' %}
 {% for book in books %}
   <li>
     <span class="item-meta">

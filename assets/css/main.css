@@ -336,6 +336,13 @@ body {
   font-weight: 600;
 }
 
+.content h4 {
+  margin: 1.35rem 0 0.45rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
 .content p,
 .content li {
   color: var(--ink);

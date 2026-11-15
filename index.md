@@ -39,7 +39,7 @@ permalink: /
     {% if latest.excerpt %}
     <p class="panel-text">{{ latest.excerpt }}</p>
     {% endif %}
-    <p class="panel-more"><a class="text-link" href="{{ latest.url | relative_url }}">Читать разбор</a></p>
+    <p class="panel-more"><a class="text-link" href="{{ latest.url | relative_url }}">Подробнее</a></p>
   </aside>
   {% endif %}
 </section>
@@ -47,7 +47,7 @@ permalink: /
 <section class="split">
   <div>
     <h2>О клубе</h2>
-    <p>Площадка для спокойных разговоров о науке и математике. Одна сильная тема за встречу, со ссылками на источники.</p>
+    <p>Площадка для разговоров о науке и математике: отобранные статьи, задачи и книги, со ссылками на источники.</p>
   </div>
   {% if shelf.size > 0 %}
   <div>
